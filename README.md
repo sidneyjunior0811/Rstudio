@@ -1,13 +1,13 @@
 # Rstudio
 
-``` Bibliotecas que utilizo para estudo
+## Bibliotecas utilizadas
 
-library(readr)* 
-library(tidyverse)*  
-library(plyr)*
-library(dplyr)*
-library(rpart)*
-library(rpart.plot)*
-library(caret)*
-library(stringr)*
-library(tidyr)*
+* library(readr) 
+* library(tidyverse)  
+* library(plyr)
+* library(dplyr)
+* library(rpart)
+* library(rpart.plot)
+* library(caret)
+* library(stringr)
+* library(tidyr)
