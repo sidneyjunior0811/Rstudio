@@ -25,6 +25,7 @@ Agrupamento_Veiculo = left_join(tratamento, Veiculo_Aut) %>%
   mutate(Cambio = ifelse(Cambio == "FALSE", "Manual", Cambio)) %>% 
   mutate(Cambio = as.factor(Cambio))
 
+# Ajustes finais
 DF_Carro = Agrupamento_Veiculo %>%
   separate(Veiculo, into = 'Nome', sep = ' ', remove = F) %>% 
   mutate(Nome = as.factor(Nome)) %>% 
