@@ -14,10 +14,10 @@ df = read.csv2(file.choose(),encoding = 'UTF-8', sep = ',')
 tratamento=df %>% 
   select(-X) %>% 
   rename(c('brand' = 'Marca', 'vehicle' = 'Veiculo', 'year_model' = 'Modelo_ano', 'fuel' = 'Combustivel',
-           'price_reference' = 'Referencia_preço', 'price' = 'Preço')) %>% 
+           'price_reference' = 'Referencia_Preco', 'price' = 'Preco')) %>% 
   mutate(Modelo_ano = ifelse(Modelo_ano == '32000','Zero KM', Modelo_ano)) %>% 
-  mutate(Preço = gsub('R\\$|\\.|',"", Preço)) %>% 
-  mutate(Preço = gsub(',','.',Preço))%>% 
+  mutate(Preco = gsub('R\\$|\\.|',"", Preco)) %>% 
+  mutate(Preco = gsub(',','.',Preco))%>% 
   mutate(Cilindradas = str_extract(Veiculo, '[0-9]\\.[0-9]'))
 
 # Veiculos Automaticos
@@ -42,7 +42,7 @@ DF_Carro = Agrupamento_Veiculo %>%
   mutate(Marca = as.factor(Marca)) %>% 
   mutate(Veiculo = as.factor(Veiculo)) %>% 
   mutate(Combustivel = as.factor(Combustivel)) %>% 
-  mutate(Referencia_preço = as.factor(Referencia_preço)) %>% 
+  mutate(Referencia_Preco = as.factor(Referencia_Preco)) %>% 
   mutate(Cilindradas = as.factor(Cilindradas)) %>% 
-  mutate(Preço = as.numeric(Preço))
+  mutate(Preco = as.numeric(Preco))
          
